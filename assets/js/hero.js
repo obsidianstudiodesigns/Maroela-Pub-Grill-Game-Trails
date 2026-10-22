@@ -98,7 +98,7 @@
     // vignette and fine grain
     "  vec2 q=v-.5;c*=1.-.38*dot(q*vec2(1.1,1.3),q*vec2(1.1,1.3));",
     "  c+=(h(v*res+fract(t))-.5)*.035;",
-    "  c*=intro;",
+    "  c=mix(vec3(.93,.94,.886),c,intro);",
     "  gl_FragColor=vec4(c,1.);",
     "}"
   ].join("\n");

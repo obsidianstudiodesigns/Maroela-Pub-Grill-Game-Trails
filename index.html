@@ -6,8 +6,8 @@
   <title>Maroela Pub &amp; Grill &amp; Game Trails | Bushveld Lodge, Restaurant &amp; Wedding Venue, Groblersdal</title>
   <meta name="description" content="Game drives, a family pub &amp; grill, bushveld accommodation and a wedding chapel in the Loskop Valley, 6 km past Loskop Dam on the N11 near Groblersdal, Limpopo. Book on WhatsApp.">
   <meta name="keywords" content="Maroela Pub and Grill, Maroela Game Trails, Groblersdal restaurant, Loskop Valley lodge, Loskop Dam accommodation, wedding venue Limpopo, game drives Groblersdal, conference venue Groblersdal">
-  <meta name="theme-color" content="#0b120d">
-  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#edefe2">
+  <meta name="color-scheme" content="light">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://obsidianstudiodesigns.github.io/Maroela-Pub-Grill-Game-Trails/">
 
@@ -34,10 +34,9 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
 
-  <link rel="preload" href="assets/fonts/cormorant.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/outfit.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/img/hero-giraffes.webp" as="image" media="(min-width: 700px)">
-  <link rel="preload" href="assets/img/hero-giraffes-m.webp" as="image" media="(max-width: 699px)">
+  <link rel="preload" href="assets/fonts/youngserif.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/img/hero-frame.webp" as="image">
   <link rel="stylesheet" href="assets/css/styles.css">
 
   <script type="application/ld+json">
@@ -105,8 +104,8 @@
   <a class="skip" href="#main">Skip to content</a>
 
   <div class="loader" aria-hidden="true">
+    <span class="loader__sun"></span>
     <img class="loader__logo" src="assets/img/logo-360.webp" alt="" width="360" height="305">
-    <span class="loader__bar"><span></span></span>
   </div>
 
   <header class="nav" data-nav>
@@ -146,24 +145,24 @@
   <main id="main">
     <!-- HERO -->
     <section class="hero" id="top">
-      <div class="hero__media" data-hero-media>
-        <picture>
-          <source media="(max-width: 699px)" srcset="assets/img/hero-giraffes-m.webp">
-          <img class="hero__img" src="assets/img/hero-giraffes.webp" alt="Two giraffes resting on red earth below a bushveld koppie at Maroela" width="1890" height="1063" fetchpriority="high" data-hero-img>
-        </picture>
-        <canvas class="hero__gl" data-hero-gl aria-hidden="true"></canvas>
-        <canvas class="hero__dust" data-hero-dust aria-hidden="true"></canvas>
-        <div class="hero__shade"></div>
-      </div>
-      <div class="hero__content wrap">
+      <div class="hero__copy">
         <h1 class="hero__title">
-          <span class="line"><span>Your <em>wild</em> escape</span></span>
-          <span class="line"><span>starts at Maroela</span></span>
+          <span class="line"><span>Your <em>wild</em></span></span>
+          <span class="line"><span>escape starts</span></span>
+          <span class="line"><span>at Maroela</span></span>
         </h1>
         <p class="hero__sub" data-hero-fade>Game drives, a proper pub &amp; grill, bushveld stays and a wedding chapel in the Loskop Valley, just off the N11.</p>
         <div class="hero__ctas" data-hero-fade>
-          <a class="btn btn--accent" href="#book" data-magnetic>Book now</a>
-          <a class="btn btn--ghost" href="#farm">See the farm <svg class="ic"><use href="assets/icons.svg#i-arrow-right"/></svg></a>
+          <a class="btn btn--ink" href="#book" data-magnetic>Book now</a>
+          <a class="btn btn--line" href="#farm">See the farm <svg class="ic"><use href="assets/icons.svg#i-arrow-right"/></svg></a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <span class="hero__sun" data-hero-sun aria-hidden="true"></span>
+        <div class="hero__frame" data-hero-media>
+          <img class="hero__img" src="assets/img/hero-frame.webp" alt="Two giraffes resting on red earth below a bushveld koppie at Maroela" width="1020" height="1275" fetchpriority="high" data-hero-img>
+          <canvas class="hero__gl" data-hero-gl aria-hidden="true"></canvas>
+          <canvas class="hero__dust" data-hero-dust aria-hidden="true"></canvas>
         </div>
       </div>
     </section>
@@ -180,8 +179,10 @@
         </dl>
       </div>
       <div class="marquee" aria-label="Wildlife on the farm" data-marquee>
+        <div class="marquee__tape">
         <div class="marquee__track">
           <span>Giraffe</span><span class="o">Eland</span><span>Oryx</span><span class="o">Kudu</span><span>Nyala</span><span class="o">Zebra</span><span>Blue Wildebeest</span><span class="o">Impala</span><span>Hartebeest</span><span class="o">Ostrich</span><span>Warthog</span><span class="o">Leopard</span>
+        </div>
         </div>
       </div>
     </section>
@@ -332,7 +333,7 @@
       </div>
       <div class="wrap venue__cta" data-reveal>
         <a class="btn btn--accent" href="#book" data-book="wedding" data-magnetic>Plan your wedding</a>
-        <a class="btn btn--ghost" href="#book" data-book="function">Plan a function</a>
+        <a class="btn btn--line" href="#book" data-book="function">Plan a function</a>
       </div>
     </section>
 
@@ -436,7 +437,7 @@
 
           <div class="form__actions">
             <button class="btn btn--accent" type="submit" value="whatsapp" data-magnetic><svg class="ic"><use href="assets/icons.svg#i-whatsapp-logo"/></svg>Send on WhatsApp</button>
-            <button class="btn btn--ghost" type="submit" value="email"><svg class="ic"><use href="assets/icons.svg#i-envelope-simple"/></svg>Send by email</button>
+            <button class="btn btn--line" type="submit" value="email"><svg class="ic"><use href="assets/icons.svg#i-envelope-simple"/></svg>Send by email</button>
           </div>
           <p class="form__note" data-form-note role="status"></p>
         </form>
@@ -452,7 +453,7 @@
             <svg class="ic"><use href="assets/icons.svg#i-map-pin"/></svg>
             <span>N11, 6 km past Loskop Dam<br>Groblersdal, Limpopo, 0470</span>
           </address>
-          <a class="btn btn--ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Maroela+Game+Trails+Groblersdal" target="_blank" rel="noopener"><svg class="ic"><use href="assets/icons.svg#i-navigation-arrow"/></svg>Get directions</a>
+          <a class="btn btn--line" href="https://www.google.com/maps/dir/?api=1&amp;destination=Maroela+Game+Trails+Groblersdal" target="_blank" rel="noopener"><svg class="ic"><use href="assets/icons.svg#i-navigation-arrow"/></svg>Get directions</a>
 
           <div class="hours" data-hours>
             <div class="hours__head">
@@ -511,6 +512,7 @@
           <a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of use</a>
         </div>
       </div>
+      <p class="footer__word" aria-hidden="true">Maroela</p>
       <div class="footer__bottom">
         <p>&copy; <span data-year>2026</span> Maroela Pub &amp; Grill &amp; Game Trails. Not for sale to persons under 18. Enjoy responsibly.</p>
         <p>Designed by <a href="https://obsidianstudiodesigns.co.za/" target="_blank" rel="noopener">Obsidian Studio Designs</a></p>

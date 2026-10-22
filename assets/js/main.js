@@ -67,10 +67,12 @@
       return;
     }
     var tl = gsap.timeline({ defaults: { ease: "expo.out" } });
-    tl.to(".loader__logo", { y: -12, opacity: 0, duration: 0.6, ease: "power2.in" })
-      .to(".loader__bar", { opacity: 0, duration: 0.3 }, "<")
-      .to(loader, { clipPath: "inset(0 0 100% 0)", duration: 1.1, ease: "expo.inOut", onComplete: function () { loader.remove(); } }, "-=0.15")
-      .from(".hero__title .line > span", { yPercent: 115, rotate: 2, duration: 1.5, stagger: 0.12 }, "-=0.55")
+    tl.to(".loader__logo", { y: -12, opacity: 0, duration: 0.5, ease: "power2.in" }, 0.4)
+      .to(".loader__sun", { scale: 4, duration: 1.1, ease: "expo.in" }, 0.4)
+      .to(loader, { clipPath: "inset(0 0 100% 0)", duration: 1.1, ease: "expo.inOut", onComplete: function () { loader.remove(); } }, "-=0.35")
+      .from("[data-hero-sun]", { yPercent: 70, scale: 0.6, duration: 2.2, ease: "expo.out" }, "-=0.7")
+      .from(".hero__frame", { yPercent: 18, rotate: 6, opacity: 0, duration: 1.8 }, "<0.15")
+      .from(".hero__title .line > span", { yPercent: 115, rotate: 2, duration: 1.5, stagger: 0.12 }, "<0.1")
       .from("[data-hero-fade]", { y: 26, opacity: 0, duration: 1.2, stagger: 0.12 }, "-=1.1")
       .from(".nav", { opacity: 0, duration: 1, clearProps: "opacity" }, "-=1.2");
   }
@@ -222,12 +224,17 @@
     }
 
     // hero content drifts and fades as the next section arrives
-    gsap.to(".hero__content", {
-      yPercent: -18, opacity: 0, ease: "none",
-      scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom 20%", scrub: true }
+    gsap.to(".hero__copy", {
+      yPercent: -14, opacity: 0, ease: "none",
+      scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom 15%", scrub: true }
     });
-    gsap.to("[data-hero-media]", {
-      yPercent: 14, ease: "none",
+    // the sun sets as you scroll away, the photo drifts the other way
+    gsap.to("[data-hero-sun]", {
+      yPercent: 45, ease: "none",
+      scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true }
+    });
+    gsap.to(".hero__visual", {
+      yPercent: -8, ease: "none",
       scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true }
     });
   } else {
