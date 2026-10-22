@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://obsidianstudiodesigns.github.io/Maroela-Pub-Grill-Game-Trails/sitemap.xml
